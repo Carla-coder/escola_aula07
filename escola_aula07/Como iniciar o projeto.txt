@@ -1,0 +1,65 @@
+
+crie a pasta do projeto (nome da pasta)
+cria a pasta no scode (api)
+abra o terminal  do vscode
+entre no diretorio api ( cd api)
+digite  npm i -g prisma (instalar o prisma)
+npm init ( cria o package.json)
+npm install ( istalar as dependências)
+enter em tudo
+prisma init --datasource-provider mysql 
+
+abra a pasta prisma e crie o banco de dados
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Professor {
+  id        Int     @id @default(autoincrement())
+  name      String
+  email     String  @unique
+  senha     String
+  turmas    Turma[]
+}
+
+model Turma {
+  id        Int    @id @default(autoincrement())
+  nome        String
+  professorId Int
+  professor   Professor @relation(fields: [professorId], references: [id])
+  atividades  Atividade[]
+}
+
+
+model Atividade {
+  id          Int    @id @default(autoincrement())
+  descricao   String
+  turmaId     Int
+  turma       Turma   @relation(fields: [turmaId], references: [id])
+}
+
+entre no .env => DATABASE_URL="mysql://root:@localhost:3306/turmas_db"
+
+abra o xampp (start Mysql e Admin/Apache)
+
+npx prisma migrate dev --name turmas_db init (inicia o migrations)
+
+crie no diretorio api a pasta src/controllers - dentro de controllers crie os arquivos turmas.js/atividade.js/professor.js
+crie o arquivo server.js
+instale o express => npm i express cors mysql
+ative o servidor => node server.js (Servidor rodando na porta 3000)
+
+dentro da pasta Front, crie os arquivos atividades.html/professor.html/turmas.html
+
+Para rodas a aplicação, abra o Live Server
+
+
+
+
