@@ -49,13 +49,14 @@ model Atividade {
 12. entre no .env e digite => DATABASE_URL="mysql://root:@localhost:3306/turmas_db"
 13. abra o xampp (start Mysql e Admin/Apache)
 14. npx prisma migrate dev --name turmas_db init (inicia o migrations) => este é o comando para aparecer as tabelas no PHP MyAdmin
-15. crie no diretório da 'api' a pasta src/controllers - dentro de controllers crie os arquivos turmas.js/atividade.js/professor.js e
+15. npx prisma db seed => comando para popular o banco de dados no prisma
+16. crie no diretório da 'api' a pasta src/controllers - dentro de controllers crie os arquivos turmas.js/atividade.js/professor.js e
 fora da pasta controllers, crie o arquivo routes.js
-16. crie o arquivo server.js fora da api
-17. instale o express => npm i express cors mysql
-18. ative o servidor => node server.js (Servidor rodando na porta 3000)
-19. dentro da pasta Front que fica fora da pasta api, crie os arquivos atividades.html/professor.html/turmas.html
-20. Para rodas a aplicação no navegador, abra com Live Server o arquivo professor.html
+17. crie o arquivo server.js fora da api
+18. instale o express => npm i express cors mysql
+19. ative o servidor => node server.js (Servidor rodando na porta 3000)
+20. dentro da pasta Front que fica fora da pasta api, crie os arquivos atividades.html/professor.html/turmas.html
+21. Para rodas a aplicação no navegador, abra com Live Server o arquivo professor.html
 
 
 
