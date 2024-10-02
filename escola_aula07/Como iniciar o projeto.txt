@@ -1,4 +1,4 @@
-Tutorial de como iniciar um projeto backend utilizando prisma
+Tutorial de como iniciar um projeto backend utilizando Prisma
 
 1. crie a pasta do projeto (nome da pasta)
 2. crie uma pasta no vscode chamada (api)
@@ -20,10 +20,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Professor {
   id        Int     @id @default(autoincrement())
-  name      String
+  nome     String
   email     String  @unique
   senha     String
   turmas    Turma[]
@@ -36,7 +35,6 @@ model Turma {
   professor   Professor @relation(fields: [professorId], references: [id])
   atividades  Atividade[]
 }
-
 
 model Atividade {
   id          Int    @id @default(autoincrement())
@@ -51,7 +49,7 @@ model Atividade {
 14. npx prisma migrate dev --name turmas_db init (inicia o migrations) => este é o comando para aparecer as tabelas no PHP MyAdmin
 15. npx prisma db seed => comando para popular o banco de dados no prisma
 16. crie no diretório da 'api' a pasta src/controllers - dentro de controllers crie os arquivos turmas.js/atividade.js/professor.js e
-fora da pasta controllers, crie o arquivo routes.js
+    fora da pasta controllers, crie o arquivo routes.js
 17. crie o arquivo server.js fora da api
 18. instale o express => npm i express cors mysql
 19. ative o servidor => node server.js (Servidor rodando na porta 3000)
