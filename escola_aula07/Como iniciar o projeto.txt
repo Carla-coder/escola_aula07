@@ -1,15 +1,15 @@
+Tutorial de como iniciar um projeto backend utilizando prisma
 
-crie a pasta do projeto (nome da pasta)
-cria a pasta no scode (api)
-abra o terminal  do vscode
-entre no diretorio api ( cd api)
-digite  npm i -g prisma (instalar o prisma)
-npm init ( cria o package.json)
-npm install ( istalar as dependências)
-enter em tudo
-prisma init --datasource-provider mysql 
-
-abra a pasta prisma e crie o banco de dados
+1. crie a pasta do projeto (nome da pasta)
+2. crie uma pasta no vscode chamada (api)
+3. abra o terminal  do vscode no cmd
+4. entre no diretório 'api'  digitando (cd api)
+5. digite  npm i -g prisma para instalar o prisma
+6. npm init (para criar o arquivo package.json)
+7. npm install (instalar as dependências) => node_modules
+8. Após as dependências instaladas dê enter em tudo no terminal.
+9. prisma init --datasource-provider mysql 
+10. abra a pasta prisma e crie o banco de dados
 
 generator client {
   provider = "prisma-client-js"
@@ -45,20 +45,18 @@ model Atividade {
   turma       Turma   @relation(fields: [turmaId], references: [id])
 }
 
-entre no .env => DATABASE_URL="mysql://root:@localhost:3306/turmas_db"
+11. npm install cors express dotenv ( para instalar o .env)
+12. entre no .env e digite => DATABASE_URL="mysql://root:@localhost:3306/turmas_db"
+13. abra o xampp (start Mysql e Admin/Apache)
+14. npx prisma migrate dev --name turmas_db init (inicia o migrations) => este é o comando para aparecer as tabelas no PHP MyAdmin
+15. crie no diretório da 'api' a pasta src/controllers - dentro de controllers crie os arquivos turmas.js/atividade.js/professor.js e
+fora da pasta controllers, crie o arquivo routes.js
+16. crie o arquivo server.js fora da api
+17. instale o express => npm i express cors mysql
+18. ative o servidor => node server.js (Servidor rodando na porta 3000)
+19. dentro da pasta Front que fica fora da pasta api, crie os arquivos atividades.html/professor.html/turmas.html
+20. Para rodas a aplicação no navegador, abra com Live Server o arquivo professor.html
 
-abra o xampp (start Mysql e Admin/Apache)
-
-npx prisma migrate dev --name turmas_db init (inicia o migrations)
-
-crie no diretorio api a pasta src/controllers - dentro de controllers crie os arquivos turmas.js/atividade.js/professor.js
-crie o arquivo server.js
-instale o express => npm i express cors mysql
-ative o servidor => node server.js (Servidor rodando na porta 3000)
-
-dentro da pasta Front, crie os arquivos atividades.html/professor.html/turmas.html
-
-Para rodas a aplicação, abra o Live Server
 
 
 
