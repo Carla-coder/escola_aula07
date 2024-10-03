@@ -193,7 +193,7 @@ DELETE /api/atividades/:id: Exclui uma atividade.
 
 O frontend é composto por três páginas principais:
 
-### 1. Tela de Login (`login.html`)
+### 1. Tela de Login (`professor.html`)
 
 Esta tela é responsável por autenticar o professor no sistema.
 
@@ -212,6 +212,7 @@ Esta página lista as atividades de uma turma específica e permite o gerenciame
 - Faça login utilizando as credenciais de professor.
 
 - Gerencie suas turmas e atividades a partir do painel principal.
+- 
 ## Autores
 
 - [@Carla-coder](https://www.github.com/Carla-coder)
