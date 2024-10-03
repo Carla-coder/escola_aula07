@@ -1,7 +1,7 @@
 
 # Tutorial para Iniciar um Projeto Backend com Prisma
 
-Este tutorial descreve como configurar um projeto backend utilizando Prisma com um banco de dados MySQL, e integrando com um frontend para gerenciamento de Turmas e Atividades.
+Este tutorial descreve como configurar um projeto backend utilizando Prisma com um banco de dados MySQL, e integrando com um frontend para gerenciamento de Professores, Turmas e Atividades.
 
 ## Passos para Configuração
 
