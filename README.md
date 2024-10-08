@@ -212,7 +212,7 @@ Esta página lista as atividades de uma turma específica e permite o gerenciame
 - Faça login utilizando as credenciais de professor.
 
 - Gerencie suas turmas e atividades a partir do painel principal.
-- 
+ 
 ## Autores
 
 - [@Carla-coder](https://www.github.com/Carla-coder)
